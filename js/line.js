@@ -35,6 +35,11 @@ class Line{
         this.r = this.numerator1 / this.denominator;
         this.s = this.numerator2 / this.denominator;
 
+        this.collisionX = this.pos.x + this.r * (this.dir.x - this.pos.x);
+        this.collisionY = this.pos.y + this.r * (this.dir.y - this.pos.y);
+
+        this.colPos = createVector(this.collisionX,this.collisionY);
+
         return (this.r >= 0 && this.r <= 1) && (this.s >= 0 && this.s <= 1);
     }
 }

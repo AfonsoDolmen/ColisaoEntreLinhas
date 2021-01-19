@@ -17,6 +17,6 @@ function draw(){
     surface.draw();
 
     if(ray.collision(surface)){
-        stroke(255,0,0);
+        circle(ray.colPos.x,ray.colPos.y,10);
     }
 }
